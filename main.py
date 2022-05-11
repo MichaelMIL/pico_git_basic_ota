@@ -1,11 +1,11 @@
 
 
 def connectToWifiAndUpdate():
-    import time, machine, network, gc, confs.secrets as secrets
+    import time, machine, network, gc, app.confs.secrets as secrets
     time.sleep(1)
     print('Memory free', gc.mem_free())
 
-    from lib.ota_updater import OTAUpdater
+    from app.lib.ota_updater import OTAUpdater
 
     sta_if = network.WLAN(network.STA_IF)
     if not sta_if.isconnected():
@@ -26,7 +26,7 @@ def connectToWifiAndUpdate():
         gc.collect()
 
 def startApp():
-    import program
+    import app.program as program
 
 
 connectToWifiAndUpdate()
