@@ -55,7 +55,7 @@ class HttpClient:
 
     def request(self, method, url, data=None, json=None, file=None, custom=None, saveToFile=None, headers={}, stream=None):
         chunked = data and self.is_chunked_data(data)
-        redirect = None #redirection url, None means no redirection
+        redirect = None #redirectio n url, None means no redirection
         def _write_headers(sock, _headers):
             for k in _headers:
                 sock.write(b'{}: {}\r\n'.format(k, _headers[k]))

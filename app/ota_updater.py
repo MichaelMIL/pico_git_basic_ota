@@ -3,7 +3,7 @@ from .httpclient import HttpClient
 
 class OTAUpdater:
     """
-    A class to update your MicroController with the latest version from a GitHub tagged release,
+    A class to update your Mi croController with the latest version from a GitHub tagged release,
     optimized for low power usage.
     """
 
