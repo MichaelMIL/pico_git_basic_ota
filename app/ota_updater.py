@@ -1,5 +1,5 @@
 import os, gc
-from app.lib.httpclient import HttpClient
+from app.httpclient import HttpClient
 
 class OTAUpdater:
     """
