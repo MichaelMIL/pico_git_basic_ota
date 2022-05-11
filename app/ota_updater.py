@@ -1,5 +1,5 @@
 import os, gc
-from app.httpclient import HttpClient
+from .httpclient import HttpClient
 
 class OTAUpdater:
     """
@@ -205,7 +205,6 @@ class OTAUpdater:
             self._mk_dirs(toPath)
 
         for entry in os.ilistdir(fromPath):
-            print('\tCopying: ', entry[0])
             is_dir = entry[1] == 0x4000
             if is_dir:
                 self._copy_directory(fromPath + '/' + entry[0], toPath + '/' + entry[0])

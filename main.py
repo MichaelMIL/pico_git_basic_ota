@@ -21,12 +21,10 @@ def connectToWifiAndUpdate():
         machine.reset()
     else:
         del(otaUpdater)
-        sta_if.disconnect()
-        del(sta_if)
         gc.collect()
 
 def startApp():
-    import app.program as program
+    import app.start
 
 
 connectToWifiAndUpdate()
